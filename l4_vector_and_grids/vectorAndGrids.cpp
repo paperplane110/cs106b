@@ -10,7 +10,14 @@ using namespace std;
 
 int main() {
     vector<int> vec;    // create an empty vector only stores int
+
+    // add element at the end
     vec.push_back(1);
-    cout << vec[0] << endl;
+
+    // traverses
+    for (int num : vec) {
+        cout << num << endl;
+    }
+
     return 0;
 }

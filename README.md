@@ -58,12 +58,39 @@ for (int i = 0; i < 10; i++) {
 
 - a sequence of characters
 - Marked by ""
+- is mutable
 
 **Char**
 
 - a single character
 - Marked by ''
 - Can be represented by a number (ASCII code)
+- is const, cannot be changed
+
+**Access by index**
+
+```cpp
+string s = "apple";
+s[0] = "A";
+cout << s << endl;
+
+>>> Apple
+```
+
+**Concat**
+
+- YES: string + string
+- YES: string + char
+- NO: char + char
+
+> Note: the following statement is INVALID!
+>
+> `string s = "apple" + "s"`
+> 
+> But this will work:
+> `string s = string("apple") + "s";`
+> 
+> Also, this: `string s = "apple"; s += 's'`
 
 **Looping through a string**
 
@@ -76,3 +103,20 @@ for (int i=0; i < word.length(); i++) {}
 for (char letter : word) {}
 ```
 
+## L4 Vector and grids
+
+### vector
+
+- a list of same type elements
+- can be shrunk and extended
+
+> 💡Tips: Pass-by-value vs. Pass-by-reference
+> 
+> **Pass-by-value**:
+> - will make a copy
+> - won't change the original one.
+> 
+> **Pass-by-ref**:
+> - won't make a copy (very usefully when facing a large data structure)
+> - the original one would be edited
+> - provide a workaround for **multiple return values**
