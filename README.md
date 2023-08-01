@@ -120,3 +120,45 @@ for (char letter : word) {}
 > - won't make a copy (very usefully when facing a large data structure)
 > - the original one would be edited
 > - provide a workaround for **multiple return values**
+
+**Reference**
+
+Use & (ampersand) to indicate it's a reference to a certain data type.
+
+- double&: the reference of a double variable
+
+When to use ref:
+
+- edit data
+- avoid big data copy
+- return multiple values
+
+# Games
+
+Course: [BiliBili Link](https://www.bilibili.com/video/BV16h4y1d766/?spm_id_from=333.880.my_history.page.click&vd_source=0f6b43e09abf3b0bbe74b006f5977c60)
+
+## 1. Tetromino
+
+**wstring**
+
+> `std::string` is a basic_string templated on a `char`, 
+> and `std::wstring` on a `wchar_t`.
+
+**L"foobar"** 
+
+- a wstring.
+
+**关于指向数组的指针**
+
+- 当数组本身不打算变化的时候，直接声明数组变量；
+- 当希望改变数组内部，并且需要经常修改数组的时候，使用指向数组的指针；
+
+**三元表达式**
+
+```c++
+bool a = (1+1 == 2) ? true : false;
+// equals to
+if (1+1==2) a = true;
+else a = false
+```
+
